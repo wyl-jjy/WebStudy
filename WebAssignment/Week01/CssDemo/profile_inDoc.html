@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <!-- implement parallax scrolling with id selector -->
+    <style>
+        #div1{
+            background-image: url(../img/【4K\ UHD】your\ name你的名字3840x2160壁纸_彼岸图网.jpg);
+            background-size: cover;
+            background-attachment: fixed;  
+            color: rgb(0, 255, 30)
+        }
+        #divleft{
+            width: 600px;
+            height:150px;
+            float: left;
+        }
+        #divright{
+            margin-left: 100px;
+            width: 150px;
+            height:150px;
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <div id="div1">
+        <audio controls src="../music/pop-91931.mp3" ></audio>
+        <div>
+            <a href="#form" title="skip function " >skip to a form</a>
+        </div>
+        <hr>
+
+        <div style="height:150px ;width: auto; ">
+            <div id="divleft">
+                <table border="1px" cellspacing="0"  width="600px" style="text-align: center" title="show">
+                    <caption>Personal introduction</caption>
+                    <tr>
+                        <td>Personal photo</td>
+                        <td>identity</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../img\541713460234.JPG" title="my picture" alt="my picture" width="100px" height="100px"></td>
+                        <td>postgraduate student</td>
+                    </tr>
+                </table>
+            </div>
+    
+        <div id="divright">
+            <h3 style="text-align: center;" and reason</h3>
+            <table title="my interest" border="1px" cellspacing="0"  width="600px"  style="text-align: center">
+                <caption>introduce</caption>
+                <thead>
+                    <tr>
+                        <td>Hobby</td>
+                        <td>Reason</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                        <td>online games</td>
+                        <td>exciting</td>
+                    </tr>
+                    <tr>
+                        <td>animation</td>
+                        <td>meaningful</td>
+                    </tr>
+                </tbody>
+            </table>       
+        </div>
+        </div>
+        
+        <hr>
+    
+         <!-- test inline css style module-->
+         <div id="cv" style="font-style: italic; ">
+            <h3>CV</h3>
+            <ul>
+                <li>Education</li>
+                    <ul title="Education">
+                        <li>Four years of university study in software engineering</li>
+                        <li>doing graduate school in software engineering</li>
+                    </ul>
+                <li>Programming language</li>
+                <ul>
+                    <li>Java</li>
+                    <li>Mysql</li>
+                    <li>Wechat</li>
+                </ul>
+            </ul>
+        </div>
+    
+       
+        <!--form function realization-->
+        <div style="margin-top: 100px;">
+            <h2>form function</h2>
+      
+            <form method="post" id="form">
+                First name:<input type="text" name="fn">
+                Last name:<input type="text" name="ln">
+                <br>
+                <p>Describe</p>
+                <textarea rows="10" cols="50" name="textarea" placeholder="write something what you want"></textarea>
+                <br>  
+                <button type="submit">submit</button>
+                <button type="reset">reset</button>
+                <a href="https://www.cardiff.ac.uk/"><button>sponsor website</button></a>
+                <a href="mailto:wyltest990316.outlook.com"><button>email</button></a>
+            </form>
+          
+            <!--<form method="get" id="form">
+                First name:<input type="text" name="fn">
+                Last name:<input type="text" name="ln">
+                <br>
+                <p>Describe</p>
+                <textarea rows="10" cols="50" name="textarea" placeholder="write something what you want"></textarea>
+                <br>
+                <button type="submit">submit</button>
+                <button type="reset">reset</button>
+                <a href="https://www.cardiff.ac.uk/"><button>sponsor website</button></a>
+                <a href="mailto:wyltest990316.outlook.com"><button>email</button></a>
+            </form>-->
+        </div> 
+    </div>
+   
+</body>
+</html>
