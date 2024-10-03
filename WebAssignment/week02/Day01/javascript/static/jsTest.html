@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Allowed readers:</div>
+    <ul>
+      <li>Bob</li>
+      <li>Alice</li>
+    </ul>
+    <!-- a comment node The reader will
+    not work yet as the function has not been called!
+    go to console in the browser and call the go() function-->
+    <script>
+      function go() {
+        //complete this line to get the child nodes of the body (see slides)
+        
+        var childNodes = document.body.childNodes;
+        
+        for(var i=0; i < childNodes.length; i++) {
+          console.log(childNodes[i]);
+        }
+        console.log('-----');
+        console.log('First:' + document.body.firstChild);
+        console.log('Last:' + document.body.lastChild);
+      }
+      go()
+    </script>
+  </body>
+</html>

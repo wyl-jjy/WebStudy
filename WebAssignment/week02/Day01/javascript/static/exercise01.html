@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ButtonExercise</title>
+</head>
+<body>
+    <button onclick="displayWait05()">test</button>
+    <button onclick="displayWait01()">wait 2 seconds</button>
+    <button onclick="displayWait02()">wait random time</button>
+    <button onclick="displayWait03()">add a row</button>
+    <button onclick="displayWait04()">BBC</button>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <form id="form1" onsubmit="displayWait05">
+        last name<input type="text" id="ln">
+        first name<input type="text" id="fn">
+        gender<input type="text" id="gender">
+        Date Of Birth<input type="text" id="time">
+        <textarea placeholder="Max length 200 words" id="text"></textarea>
+        <button type="submit" onclick="displayWait05()">submit</button>
+    </form>
+
+<script>
+   function displayWait(){
+        alert("you have waited …")
+    }
+
+   function displayWait01(){
+    setTimeout(()=>{
+        alert("you have waited 2…")
+    },2000)
+   } 
+
+   
+   function displayWait02(){
+    var time=Math.random(1000)
+    setTimeout(() => {
+        alert("you wait"+time)
+    }, time);
+   }
+
+   function displayWait03(){
+    console.log(document.getElementById('div1'))
+    document.getElementById('div1').innerHTML='<p>add an row</p>';
+   }
+
+   function displayWait04(){
+   
+    var str="Twenty-eight health workers in Lebanon have been killed in the last 24 hours, the World Health Organization (WHO) reports.WHO chief Tedros Adhanom Ghebreyesus told a news conference that many health workers are also"+
+    "not reporting to duty as they fled the areas where they work due to bombardment"+"Plans to deliver a large shipment of trauma and medical supplies to Lebanon will not be able to go ahead on Friday due to flight restrictions over the country, he added."
+        document.getElementById('div2').innerHTML='<p id="p1"></p>';
+        var content=""
+        for(let i=1;i<=str.length;i++){
+            if((i%100)!=0){
+                 content= content+str[i-1]
+                
+            }else{
+                content= content+str[i-1]+'</br>'
+            }
+            
+        }
+        document.getElementById('p1').innerHTML=content
+   }
+
+   function displayWait05(){
+    var pass=true;
+    let pas=true;
+    const dateReg = /^(\d{4})(-)(\d{2})(-)(\d{2})$/;
+        var fn=document.getElementById('fn').value;
+        var ln=document.getElementById('ln').value;
+        var gender=document.getElementById('gender').value;
+        var time=document.getElementById('time').value;
+        var text=document.getElementById('text').value;
+        if(fn!=""&&ln!=""&&gender!=""&&time!=""&&text!=""){
+            
+            if(fn.length>20||ln.length>20||text.length>200){
+                
+                alert("too long")
+                pas=false;
+        }
+            
+            if(gender!="f"&&gender!="m"&&gender!="p"){
+                
+            alert("Female (f), Male (m), Prefer not to say (p) ")
+            pas=false;
+        }
+
+            if(!(dateReg.test(time))){
+            alert("XX/XX/XX")
+            pas=false;
+
+            if(!pas){
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        }else{
+            alert("please write")
+           return pass=false;
+        }
+        
+
+   }
+
+</script>
+</html>

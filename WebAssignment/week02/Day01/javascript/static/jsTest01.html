@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsTest</title>
+</head>
+
+<body>
+    <div>
+        <h1> HelloWorld in JS</h1>
+        <script>
+
+
+            //test
+            //pop方法从后往前删除元素，但会保留数据的最后一个数据
+            // var array1=["y","l"];
+            // for(let i=0;i<array1.length;i++){
+            //     console.log(array1.pop());
+            // }
+
+          
+                function printArray(){
+                let testArray=["w","y","l"];
+                testArray.forEach(element => {
+                    console.log(element)
+                });
+                }
+               printArray();
+
+               function countArray(){
+                    let testArray1=[1,2,3,4];
+                    var count=0;
+                    for(let i=0;i<testArray1.length;i++){
+                        count=count+testArray1[i];
+                    }
+                    console.log(count)
+               }
+              countArray()
+
+               function testlength(){
+                const str="Life, the universe and everything. Answer"
+               
+                console.log(`${str} ${str.length}`)
+               }
+              testlength()
+               
+               function testNumber(){
+                let str1="Life123";
+                for(let i=0;i<str1.length;i++){
+                    if(!(isNaN(str1.charAt(i)))){
+                        console.log(str1.charAt(i)+"this str has number")
+                    }
+                }
+               }
+              testNumber()
+            
+        </script>
+    </div>
+</body>
+
+</html>
